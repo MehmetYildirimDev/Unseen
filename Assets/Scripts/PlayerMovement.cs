@@ -22,14 +22,15 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         animatorController();
+
     }
 
     private void animatorController()
     {
         animator.SetFloat("velocity", dif.magnitude);
-        
     }
 
+    
     public void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
