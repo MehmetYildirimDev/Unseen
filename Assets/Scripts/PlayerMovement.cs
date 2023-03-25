@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,19 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 lastPos;
 
     public Vector3 dif;
+
+    public Animator animator;
+
+    private void Update()
+    {
+        animatorController();
+    }
+
+    private void animatorController()
+    {
+        animator.SetFloat("velocity", dif.magnitude);
+        
+    }
 
     public void FixedUpdate()
     {
