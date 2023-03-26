@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyAngle : MonoBehaviour
 {
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Yakalandi - Game Over");
+            //Time.timeScale = 0;
         }
     }
 }
