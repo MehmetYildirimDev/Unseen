@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instance;//Singleton yapiyoz
+    public int playerScale;
+
+
     //public VariableJoystick VariableJoystick;
     public new Rigidbody rigidbody;
     public float speed;
@@ -18,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 dif;
 
     public Animator animator;
+
+    private void Awake()
+    {
+        instance = this;
+        playerScale = 0;
+    }
 
     private void Update()
     {
@@ -55,9 +65,6 @@ public class PlayerMovement : MonoBehaviour
             dif = Vector3.zero;
         }
 
-
-        //Vector3 direction = Vector3.forward * VariableJoystick.Vertical + Vector3.right * VariableJoystick.Horizontal;
-        //rigidbody.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
         rigidbody.AddForce(dif * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
         if (dif.magnitude > 0.2f)

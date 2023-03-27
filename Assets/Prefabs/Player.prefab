@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 8069590553349684785}
   - component: {fileID: 8069590553359027696}
   - component: {fileID: 8069590553359027702}
-  - component: {fileID: 8069590553359027700}
+  - component: {fileID: 1702513995}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1709,6 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bd10c1c15cf5741bcc1974239ec8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerScale: 0
   rigidbody: {fileID: 8069590553359027702}
   speed: 500
   rotationSpeed: 10
@@ -1725,26 +1726,27 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8069590553359027697}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 70
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 3
---- !u!65 &8069590553359027700
-BoxCollider:
+  m_CollisionDetection: 0
+--- !u!136 &1702513995
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8069590553359027697}
-  m_Material: {fileID: 13400000, guid: c0e554288f897f24cbdaeda169cbcac7, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5, y: 4, z: 1.5}
+  m_Radius: 0.95
+  m_Height: 4
+  m_Direction: 1
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &8069590553359027699
 GameObject:
