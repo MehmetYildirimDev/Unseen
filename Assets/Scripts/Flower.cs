@@ -9,7 +9,8 @@ public class Flower : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player Can verildi");
-            collision.transform.localScale += Vector3.one; 
+            collision.transform.localScale += Vector3.one;
+            PlayerMovement.instance.playerScale++;
             Destroy(this.gameObject);
         }
     }
