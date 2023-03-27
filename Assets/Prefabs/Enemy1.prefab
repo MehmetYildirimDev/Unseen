@@ -1840,6 +1840,7 @@ GameObject:
   - component: {fileID: 6320885417482695357}
   - component: {fileID: 6320885418248643950}
   - component: {fileID: 6320885417492201854}
+  - component: {fileID: 2098952528}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -1874,7 +1875,7 @@ Animator:
   m_GameObject: {fileID: 6320885417492201853}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2db7e17401e08b94697ecd7acce75ab1, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32399f7ceddc97d429de474ac568505f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1921,6 +1922,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   distance: 0
+--- !u!65 &2098952528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320885417492201853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: -0, y: 2, z: 0}
 --- !u!1 &6320885417492201855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1985,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 06e5d878f6254cb4da625716f78a57f4, type: 2}
+  - {fileID: 2100000, guid: 01dfe3feaac9f1345835fcc3c53e886c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2063,6 +2077,8 @@ GameObject:
   - component: {fileID: 6591337039846244720}
   - component: {fileID: 6591337039846244722}
   - component: {fileID: 6591337039846244721}
+  - component: {fileID: 919132148758460737}
+  - component: {fileID: 919132148758460736}
   m_Layer: 0
   m_Name: EnemyAngle
   m_TagString: Untagged
@@ -2171,3 +2187,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1911236, y: 1.0098628, z: 8.72802e-14}
   m_Center: {x: -0.0072343214, y: -0.4858184, z: 0.00000011751851}
+--- !u!65 &919132148758460737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591337039846244623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9913249, y: 0.083400995, z: 8.72802e-14}
+  m_Center: {x: 0.005645798, y: -0.9583005, z: 0.0000001738426}
+--- !u!65 &919132148758460736
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591337039846244623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.874683, y: 0.13597219, z: 0.009355334}
+  m_Center: {x: -0.0043147462, y: 0.26865453, z: -0.004677671}
