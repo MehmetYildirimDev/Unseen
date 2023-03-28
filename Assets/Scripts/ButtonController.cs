@@ -9,8 +9,8 @@ public class ButtonController : MonoBehaviour
 
     private Button levelButton;
 
-    private Text buttonText;
-    private GameObject lockIconObject;
+    [SerializeField]private Text buttonText;
+    [SerializeField]private GameObject lockIconObject;
 
     public int buttonValue;
 
@@ -18,14 +18,10 @@ public class ButtonController : MonoBehaviour
 
     private void Start()
     {
-        buttonText = transform.GetChild(0).GetComponent<Text>();
-        lockIconObject = transform.GetChild(1).gameObject;
 
         levelButton = GetComponent<Button>();
         levelButton.onClick.AddListener(LoadSelectedScene);
-
-        buttonValue = int.Parse(buttonText.text);
-    }
+    } 
 
     public void SetLockState()
     {
@@ -35,12 +31,7 @@ public class ButtonController : MonoBehaviour
         {
             buttonText.text = buttonValue.ToString();
             lockIconObject.SetActive(false);
-        }
-        else
-        {
-            buttonText.text = "";
-            lockIconObject.SetActive(true);
-        }
+        }        
     }
 
 
@@ -51,6 +42,8 @@ public class ButtonController : MonoBehaviour
             SceneManager.LoadScene(buttonValue);
         }
     }
+
+
 
 
 }
