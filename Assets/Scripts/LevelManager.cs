@@ -31,12 +31,12 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {  
-        addButtoontoList();
+        AddButtoontoList();
         LoadComplateLevels();
         CheckAllButton();
     }
 
-    private void addButtoontoList()
+    private void AddButtoontoList()
     {
         for (int i = 0; i < Buttons.transform.childCount; i++)
         {

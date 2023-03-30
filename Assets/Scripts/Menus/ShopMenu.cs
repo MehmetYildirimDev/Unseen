@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class levelsMenu : MonoBehaviour
+public class ShopMenu : MonoBehaviour
 {
     public void OnClick_Back()
     {

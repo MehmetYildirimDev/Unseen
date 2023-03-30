@@ -5,23 +5,15 @@ using UnityEngine;
 public static class MenuManager
 {
     public static bool IsInitialised { get; private set;}
-    public static GameObject mainMenu, settingsMenu, levelsMenu;
+    public static GameObject mainMenu, settingsMenu, ShopMenu;
     public static void Init()
     {
         GameObject canvas = GameObject.Find("Canvas");
         mainMenu = canvas.transform.Find("MainMenu").gameObject;
         settingsMenu = canvas.transform.Find("SettingsMenu").gameObject;
-        levelsMenu = canvas.transform.Find("LevelsMenu").gameObject;
+        ShopMenu = canvas.transform.Find("ShopMenu").gameObject;
 
         IsInitialised = true;
-        if (mainMenu != null)
-        {
-            Debug.Log("main menu null degil");
-        }
-        else
-        {
-            Debug.Log("null");
-        }
     }
 
     public static void OpenMenu(Menu menu, GameObject callingMenu)
@@ -37,8 +29,8 @@ public static class MenuManager
             case Menu.SETTINGS:
                 settingsMenu.SetActive(true);
                 break;
-            case Menu.LEVELS:
-                levelsMenu.SetActive(true);
+            case Menu.SHOP:
+                ShopMenu.SetActive(true);
                 break;
             default:
                 break;

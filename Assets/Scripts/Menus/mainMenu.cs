@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour
 {
@@ -10,11 +11,15 @@ public class mainMenu : MonoBehaviour
         MenuManager.OpenMenu(Menu.SETTINGS, gameObject);
     }
 
-    public void OnClick_Levels()
+    public void OnClick_Shop()
     {
-        MenuManager.OpenMenu(Menu.LEVELS, gameObject);
+        MenuManager.OpenMenu(Menu.SHOP, gameObject);
     }
 
+    public void OnClick_Play()
+    {
+        SceneManager.LoadScene(0);
+    }
 
 
 }
