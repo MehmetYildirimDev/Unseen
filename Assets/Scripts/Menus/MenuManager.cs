@@ -4,7 +4,8 @@ using UnityEngine;
 
 public static class MenuManager
 {
-    public static bool IsInitialised { get; private set;}
+    //public static bool IsInitialised { get; private set;}
+    public static bool IsInitialised;
     public static GameObject mainMenu, settingsMenu, ShopMenu;
     public static void Init()
     {
