@@ -7,12 +7,17 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject Buttons;
 
-     private List<GameObject> buttonList = new List<GameObject>();
+    private List<GameObject> buttonList = new List<GameObject>();
 
     private int activeLevelIndex = 1;
 
     public static LevelManager instance;//Singleton yapiyoz
 
+    /// <summary>
+    /// eski aweke
+    /// </summary>
+    /*
+     
     private void Awake()
     {
         if (instance == null)
@@ -26,11 +31,15 @@ public class LevelManager : MonoBehaviour
         }
 
     }
+    */
 
-
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
-    {  
+    {
         AddButtoontoList();
         LoadComplateLevels();
         CheckAllButton();
@@ -55,7 +64,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void LoadComplateLevels()   
+    private void LoadComplateLevels()
     {
         if (PlayerPrefs.GetInt("LevelIndex") == 0)
         {
