@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour
 {
-    
+    private void Start()
+    {
+        MenuManager.IsInitialised = false;
+    }
+
     public void OnClick_Settings()
     {
         MenuManager.OpenMenu(Menu.SETTINGS, gameObject);
