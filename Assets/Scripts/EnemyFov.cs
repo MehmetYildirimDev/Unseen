@@ -13,7 +13,7 @@ public class EnemyFov : MonoBehaviour
     public LayerMask obstructionMask;
     public bool canSeePlayer;
 
-    private Transform target;
+    public Transform target;
 
     private void Start()
     {
@@ -22,7 +22,9 @@ public class EnemyFov : MonoBehaviour
 
     private void Update()
     {
+
         FOVChechk();
+        
     }
     private void FOVChechk()
     {

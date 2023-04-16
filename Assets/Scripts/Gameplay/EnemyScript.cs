@@ -14,16 +14,29 @@ public class EnemyScript : MonoBehaviour
 
     public float distance;
 
+    public EnemyFov enemyFovScript;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         index = 1;
+        enemyFovScript = gameObject.GetComponent<EnemyFov>();
+    }
+
+    private void Start()
+    {
+        
         target = dots[index].transform;
         agent.SetDestination(target.position);
     }
 
     private void Update()
     {
+        if (enemyFovScript.canSeePlayer)
+        {
+            agent.SetDestination(enemyFovScript.target.position);
+            return;
+        }
+
         /*
 
             distance = Vector3.Distance(transform.position, target.position);
@@ -53,12 +66,12 @@ public class EnemyScript : MonoBehaviour
             if (index == 0)
             {
                 index = 1;
-                
+
             }
             else if (index == 1)
             {
                 index = 0;
-                
+
             }
             agent.SetDestination(dots[index].transform.position);
         }
@@ -71,6 +84,6 @@ public class EnemyScript : MonoBehaviour
     }
 
 
-    
+
 
 }

@@ -2556,6 +2556,7 @@ MonoBehaviour:
   - {fileID: 1978021424}
   - {fileID: 95553701}
   distance: 0
+  enemyFovScript: {fileID: 0}
 --- !u!1 &512143350835576954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,8 +2568,8 @@ GameObject:
   - component: {fileID: 512143350835813466}
   - component: {fileID: 512143350828331962}
   - component: {fileID: 512143352227685481}
-  - component: {fileID: 512143350835576953}
   - component: {fileID: 5810545558240671831}
+  - component: {fileID: 512143350835576953}
   - component: {fileID: 512143350835576955}
   m_Layer: 0
   m_Name: Enemy2
@@ -2598,6 +2599,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   canSeePlayer: 0
+  target: {fileID: 0}
 --- !u!1 &512143350835576956
 GameObject:
   m_ObjectHideFlags: 0
