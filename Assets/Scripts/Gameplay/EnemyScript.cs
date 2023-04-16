@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,31 +34,15 @@ public class EnemyScript : MonoBehaviour
     {
         if (enemyFovScript.canSeePlayer)
         {
-            agent.SetDestination(enemyFovScript.target.position);
+            //agent.SetDestination(enemyFovScript.target.position);
+            GameOver();
+            
             return;
+        
+
         }
 
-        /*
-
-            distance = Vector3.Distance(transform.position, target.position);
-
-
-            if (distance < 0.1f)
-            {
-                if (index == 0)
-                {
-                    index = 1;
-                    agent.isStopped = true;
-                }
-                else if (index == 1)
-                {
-                    index = 0;
-                    agent.isStopped = true;
-                }
-            }
-            agent.isStopped = false;
-         */
-
+        
 
 
         if (agent.remainingDistance <= agent.stoppingDistance)
@@ -76,14 +61,15 @@ public class EnemyScript : MonoBehaviour
             agent.SetDestination(dots[index].transform.position);
         }
 
-        Debug.Log(distance + " " + index);
-
-
-
 
     }
 
+    private void GameOver()
+    {
+        Debug.Log("oyun bitti");
+        agent.isStopped = true;
+        GetComponent<Animator>().Play("EnemyCatch");
+        PlayerMovement.instance.isGameOver = true;
 
-
-
+    }
 }
