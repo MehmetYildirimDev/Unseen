@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGameOver)
         {
-            GameOverScript.instance.ShowGameOVerPanel();
+            GameManager.instance.ShowGameOVerPanel();
         }
 
         animatorController();

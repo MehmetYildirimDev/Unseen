@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     private GameObject GameOverPanel;
+    private GameObject LevelComplatePanel;
 
-    public static GameOverScript instance;//Singleton yapiyoruz
+    public static GameManager instance;//Singleton yapiyoruz
 
     private void Awake()
     {
@@ -19,6 +21,7 @@ public class GameOverScript : MonoBehaviour
         try
         {
             GameOverPanel = GameObject.Find("GameOverPanel");
+            LevelComplatePanel = GameObject.Find("LevelComplatePanel");
         }
         catch (System.Exception)
         {
@@ -27,17 +30,24 @@ public class GameOverScript : MonoBehaviour
         }
 
         GameOverPanel.SetActive(false);
+        LevelComplatePanel.SetActive(false);
     }
 
     public void ShowGameOVerPanel()
     {
-        StartCoroutine(WaitAndRun());
+        StartCoroutine(WaitAndRunGameOverPanel());
     }
 
-    public IEnumerator WaitAndRun()
+    private IEnumerator WaitAndRunGameOverPanel()
     {
         yield return new WaitForSeconds(1f);
         GameOverPanel.SetActive(true);
+    }
+
+    public void ShowLevelComplatePanel()
+    {
+        LevelComplatePanel.SetActive(true);
+        
     }
 
     public void RestartLevel()
