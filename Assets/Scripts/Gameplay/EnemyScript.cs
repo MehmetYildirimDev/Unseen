@@ -32,7 +32,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
-        if (enemyFovScript.canSeePlayer)
+        if (enemyFovScript.canSeePlayer || PlayerMovement.instance.isGameOver)
         {
             //agent.SetDestination(enemyFovScript.target.position);
             GameOver();
