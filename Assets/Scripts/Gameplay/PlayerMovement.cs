@@ -93,4 +93,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+
+    //oyun tek bi fonksiyonda bitmeli ve diger objeler oyun bitti methodu calistiginda ona gore tepki vermeli
+    public void GameOver()
+    {
+        isGameOver = true;
+    }
+
 }
