@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270327488505336197}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2564529938429815864}
   m_Father: {fileID: 3449789814070000726}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &266794318201613747
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -108,8 +108,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545144898498661823}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -2.8, z: -0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -0.009534836, y: -3.8065076, z: -0.0025548935}
+  m_LocalScale: {x: 2.0000005, y: 2.000001, z: 2.0000005}
   m_Children: []
   m_Father: {fileID: 275875348155164401}
   m_RootOrder: 0
@@ -4896,8 +4896,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3449789814070000726}
   - component: {fileID: 9000729549133902436}
-  - component: {fileID: 4417953088418656688}
   - component: {fileID: 2224301896015031159}
+  - component: {fileID: 4418410656055138895}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -4932,21 +4932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ed276987c08bd4885b86e20ea656e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 15
   impactEffectPrefab: {fileID: 649430720938688429, guid: 1e856b1d193b44e46a37d84aa6374526, type: 3}
---- !u!65 &4417953088418656688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2890204965468301664}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.5193105, y: 1.5811481, z: 1}
-  m_Center: {x: 0.5829418, y: 0.030444622, z: 0}
 --- !u!54 &2224301896015031159
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4963,3 +4950,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &4418410656055138895
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2890204965468301664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 3.659299
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 1.1703506}

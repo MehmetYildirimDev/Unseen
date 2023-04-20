@@ -8,7 +8,7 @@ public class Rocket : MonoBehaviour
     public GameObject impactEffectPrefab;
     void Update()
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,7 +23,7 @@ public class Rocket : MonoBehaviour
         {
             return;
         }
-        GameObject impactEffect = Instantiate(impactEffectPrefab,collision.contacts[0].point,Quaternion.identity);
+        GameObject impactEffect = Instantiate(impactEffectPrefab, collision.contacts[0].point, Quaternion.identity);
         Destroy(impactEffect, 1f);
         Destroy(this.gameObject);
     }

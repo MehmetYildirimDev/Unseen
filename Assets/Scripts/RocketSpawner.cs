@@ -10,12 +10,12 @@ public class RocketSpawner : MonoBehaviour
 
     void Start()
     {
-        Instantiate(Rocket, spawnPoint.position, Quaternion.identity);
+        SpawnObject();
         InvokeRepeating("SpawnObject", spawnDelay, spawnDelay);
     }
 
     void SpawnObject()
     {
-        Instantiate(Rocket, spawnPoint.position, Quaternion.identity);
+        Instantiate(Rocket, spawnPoint.position, this.transform.rotation);
     }
 }
