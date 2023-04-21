@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8019313776868818981}
   - component: {fileID: 8019313776868818982}
   - component: {fileID: 8019313775823197606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: door0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5920971179810379860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0, z: 0}
+  m_LocalPosition: {x: -4.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 8019313776282549778}
@@ -114,7 +114,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -12.190001, y: 4.9059086, z: -16.2025}
+  m_ConnectedAnchor: {x: -2.8979683, y: 6.868272, z: -0.4800005}
   m_UseSpring: 1
   m_Spring:
     spring: 90
@@ -125,7 +125,7 @@ HingeJoint:
     targetVelocity: 0
     force: 1
     freeSpin: 0
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_Limits:
     min: -120
     max: 120
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7312786334953158970}
   - component: {fileID: 7312786334953158969}
   - component: {fileID: 7312786333922602169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6349491512727003467}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 4.55, y: 0, z: 0}
+  m_LocalPosition: {x: 4.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 8019313776282549778}
@@ -265,7 +265,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.1399999, y: 4.9059086, z: -16.2025}
+  m_ConnectedAnchor: {x: -2.8979692, y: 6.868272, z: 8.570001}
   m_UseSpring: 1
   m_Spring:
     spring: 90
@@ -276,7 +276,7 @@ HingeJoint:
     targetVelocity: 0
     force: 1
     freeSpin: 0
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_Limits:
     min: -120
     max: 120
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8019313776282549778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ Transform:
   m_GameObject: {fileID: 8019313776282549779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.4, z: 1}
   m_Children:
   - {fileID: 5473398510215259451}
   - {fileID: 4738637808688127012}

@@ -1,2 +1,3 @@
-düsman cesiti olarak açılır kapanır kameralar konulabilir (Yapildi)
+dusman cesiti olarak acilir kapanir kameralar konulabilir (Yapildi)
 dusman olarak hayvanlar eklenebilir kedi kopek kus vs;
+anahtarli kapi yapilabilir
