@@ -15,9 +15,10 @@ public class ExitScript : MonoBehaviour
 
     public void LevelComplate()
     {
+        Debug.Log(PlayerPrefs.GetInt("LevelIndex"));
         if (PlayerPrefs.GetInt("LevelIndex") <= SceneManager.GetActiveScene().buildIndex)
         {
-            
+           
             LevelManager.instance.SaveActiveLevelIndex();
         }
 

@@ -17,5 +17,6 @@ public class RocketSpawner : MonoBehaviour
     void SpawnObject()
     {
         Instantiate(Rocket, spawnPoint.position, this.transform.rotation);
+        //GetComponent<Animation>().Play("RocketSpawnerAnim");
     }
 }
