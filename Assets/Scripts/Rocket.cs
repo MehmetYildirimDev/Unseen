@@ -13,6 +13,12 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("ScaleBuff"))
+        {
+            return;
+        }
+
+
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Game Over");

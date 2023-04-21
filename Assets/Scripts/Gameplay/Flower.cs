@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Player Can verildi");
-            collision.transform.localScale += Vector3.one/2;
+            other.transform.localScale += Vector3.one / 2;
             PlayerMovement.instance.playerScale++;
             Destroy(this.gameObject);
         }
     }
-
     private void OnDestroy()
     {
         Debug.Log("kendimi yok ettim");
