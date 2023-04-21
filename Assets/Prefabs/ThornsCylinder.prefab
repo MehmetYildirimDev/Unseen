@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 372418995288767503}
   - component: {fileID: 372418995288767500}
   m_Layer: 0
-  m_Name: Thorns
+  m_Name: ThornsCylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

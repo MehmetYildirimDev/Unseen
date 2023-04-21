@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 5971749979351304360}
   - component: {fileID: 372418994511856650}
   m_Layer: 0
-  m_Name: ThornsMove
+  m_Name: ThornsThornsCylinderMove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
