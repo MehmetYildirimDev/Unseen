@@ -6,7 +6,7 @@ public class RocketSpawner : MonoBehaviour
 {
     public GameObject Rocket;
     public Transform spawnPoint;
-    public float spawnDelay = 2f;
+    public float spawnDelay = 1f;
 
     void Start()
     {
@@ -16,7 +16,8 @@ public class RocketSpawner : MonoBehaviour
 
     void SpawnObject()
     {
+        GetComponent<Animation>().Play("RocketSpawnerAnim");    
         Instantiate(Rocket, spawnPoint.position, this.transform.rotation);
-        //GetComponent<Animation>().Play("RocketSpawnerAnim");
+        
     }
 }
