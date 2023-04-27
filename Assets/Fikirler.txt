@@ -1,6 +1,10 @@
 dusman cesiti olarak acilir kapanir kameralar konulabilir (Yapildi)
 dusman olarak hayvanlar eklenebilir kedi kopek kus vs;
-anahtarli kapi yapilabilir
+anahtarli kapi yapilabilir(Yapildi)
+Haritada Gap Býrakabiliriz Oyuncunun düsmesi icin
+Portallar Yapýlabilir
+Enemyler Oldurulebilir
+
 
 kullanýlanlar:
 	kapilar
@@ -9,12 +13,14 @@ kullanýlanlar:
 	rocketSpawner
 	haven
 
-Kullanýlmayanlar:
+Kullanilmayanlar:
 	MultiRocketSpawner
 	giyotin
 	SecurityCamera
 	ThornClynder
 	"" 2x
 	"" 4x
+	LockDoor-Key
+
 
 
