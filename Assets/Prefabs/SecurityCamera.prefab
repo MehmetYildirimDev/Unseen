@@ -736,8 +736,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 1000
-  m_Range: 12
+  m_Intensity: 10000
+  m_Range: 10
   m_SpotAngle: 50
   m_InnerSpotAngle: 5
   m_CookieSize: 10
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221a853cb6f321a4a9f532e0a666eedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FovRadius: 10
+  FovRadius: 9
   FovAngle: 50
   targetMask:
     serializedVersion: 2

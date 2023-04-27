@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,13 +12,19 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;//Singleton yapiyoruz
 
+    public GameObject GamePanelPrefab;
+    private GameObject Canvas;
+
     private void Awake()
     {
         instance = this;
+        
     }
 
     private void Start()
     {
+        CreateLevelNumberText();
+
         try
         {
             GameOverPanel = GameObject.Find("GameOverPanel");
@@ -31,6 +38,13 @@ public class GameManager : MonoBehaviour
 
         GameOverPanel.SetActive(false);
         LevelComplatePanel.SetActive(false);
+    }
+
+    private void CreateLevelNumberText()
+    {
+        Canvas = GameObject.Find("Canvas");
+        GameObject LevelText = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform);
+        GamePanelPrefab.transform.GetChild(0).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
     }
 
     public void ShowGameOVerPanel()
