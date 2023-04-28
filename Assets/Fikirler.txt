@@ -3,8 +3,8 @@ dusman olarak hayvanlar eklenebilir kedi kopek kus vs;
 anahtarli kapi yapilabilir(Yapildi)
 Haritada Gap Býrakabiliriz Oyuncunun düsmesi icin
 Portallar Yapýlabilir
-Enemyler Oldurulebilir
-Buttonlu sistemi yapalým
+Enemyler Oldurulebilir-Bayiltilabilir
+Buttonlu sistemi yapalým(yapildi)
 
 
 kullanýlanlar:
@@ -22,6 +22,7 @@ Kullanilmayanlar:
 	"" 2x
 	"" 4x
 	LockDoor-Key
+	ButtonEngel
 
 
 
