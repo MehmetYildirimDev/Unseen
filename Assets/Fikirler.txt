@@ -4,6 +4,7 @@ anahtarli kapi yapilabilir(Yapildi)
 Haritada Gap Bırakabiliriz Oyuncunun düsmesi icin
 Portallar Yapılabilir
 Enemyler Oldurulebilir
+Buttonlu sistemi yapalım
 
 
 kullanılanlar:

@@ -342,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rocket: {fileID: 2890204965468301664, guid: ea18eae54071fba43806cc719786142d, type: 3}
   spawnPoint: {fileID: 8834907492915803905}
-  spawnDelay: 1
+  spawnDelay: 1.5
 --- !u!111 &1698366910124752394
 Animation:
   m_ObjectHideFlags: 0
