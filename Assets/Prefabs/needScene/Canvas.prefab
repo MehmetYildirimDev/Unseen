@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 281021686}
   - component: {fileID: 281021688}
   - component: {fileID: 281021687}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Congr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1061830304}
   - component: {fileID: 1061830306}
   - component: {fileID: 1061830305}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: LevelComplatePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3387078488173716563}
   - component: {fileID: 3387078488173716564}
   - component: {fileID: 3387078488173716565}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 3387078489098695549}
   - component: {fileID: 3387078489098695550}
   - component: {fileID: 3387078489098695551}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 3387078490107645222}
   - component: {fileID: 3387078490107645220}
   - component: {fileID: 3387078490107645221}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GameOverPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

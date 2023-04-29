@@ -13,11 +13,11 @@ kullanýlanlar:
 	enemy
 	rocketSpawner
 	haven
+	SecurityCamera
 
 Kullanilmayanlar:
 	MultiRocketSpawner
 	giyotin
-	SecurityCamera
 	ThornClynder
 	"" 2x
 	"" 4x

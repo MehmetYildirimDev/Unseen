@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CreateLevelNumberText();
 
         try
         {
@@ -38,6 +37,8 @@ public class GameManager : MonoBehaviour
 
         GameOverPanel.SetActive(false);
         LevelComplatePanel.SetActive(false);
+
+        CreateLevelNumberText();
     }
 
     private void CreateLevelNumberText()

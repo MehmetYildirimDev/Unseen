@@ -35,7 +35,7 @@ Transform:
   - {fileID: 6482411962560015464}
   m_Father: {fileID: 6482411962851316788}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -17, z: 0}
 --- !u!114 &624732715769532745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ Light:
     serializedVersion: 2
     m_Bits: 67
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

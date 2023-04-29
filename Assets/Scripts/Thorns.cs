@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Thorns : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 120f;
 
     void Update()
     {
-        transform.Rotate(Vector3.up, speed);
+        transform.Rotate(Vector3.up, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
