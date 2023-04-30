@@ -19,7 +19,7 @@ public class LockDoor : MonoBehaviour
         foreach (var item in doors)
         {
             item.GetComponent<BoxCollider>().enabled = true;
-            item.GetComponent<MeshRenderer>().materials[1].color = Color.green;
+            item.GetComponent<MeshRenderer>().materials[1].color = new Color (108,223,130);
         }
 
         

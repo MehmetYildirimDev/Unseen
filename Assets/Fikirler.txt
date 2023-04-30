@@ -14,15 +14,17 @@ kullanýlanlar:
 	rocketSpawner
 	haven
 	SecurityCamera
+	ThornClynder
+	MoveThornClynder
 
 Kullanilmayanlar:
 	MultiRocketSpawner
 	giyotin
-	ThornClynder
 	"" 2x
 	"" 4x
 	LockDoor-Key
 	ButtonEngel
+	Portal
 
 
 
