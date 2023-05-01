@@ -19,7 +19,10 @@ public class Portal : MonoBehaviour
         {
             other.transform.position = SpawnPoint.position;
 
-            GameObject Effect = Instantiate(EffectPrefab, SpawnPoint.position,Quaternion.identity);
+            GameObject Effect = Instantiate(EffectPrefab,
+                new Vector3(SpawnPoint.position.x,SpawnPoint.position.y+2,SpawnPoint.position.z),
+                Quaternion.identity);
+
             Destroy(Effect, 1f);
         }
     }
