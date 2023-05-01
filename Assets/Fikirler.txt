@@ -16,9 +16,10 @@ kullanýlanlar:
 	SecurityCamera
 	ThornClynder
 	MoveThornClynder
+	MultiRocketSpawner
 
 Kullanilmayanlar:
-	MultiRocketSpawner
+	
 	giyotin
 	"" 2x
 	"" 4x

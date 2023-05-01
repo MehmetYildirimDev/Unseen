@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Thorns : MonoBehaviour
 {
-    public float speed = 120f;
+    public float speed = 240f;
 
     void Update()
     {
