@@ -16,12 +16,12 @@ kullanýlanlar:
 	SecurityCamera
 	ThornClynder
 	MoveThornClynder
+	"" 2xThornClynder
 	MultiRocketSpawner
 
 Kullanilmayanlar:
 	
 	giyotin
-	"" 2x
 	"" 4x
 	LockDoor-Key
 	ButtonEngel
