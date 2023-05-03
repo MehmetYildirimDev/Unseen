@@ -18861,6 +18861,10 @@ GameObject:
   - component: {fileID: 5645367004339451021}
   - component: {fileID: 5645367004339451020}
   - component: {fileID: 5645367004339451027}
+  - component: {fileID: 260291672}
+  - component: {fileID: 260291673}
+  - component: {fileID: 260291674}
+  - component: {fileID: 260291675}
   m_Layer: 0
   m_Name: Cylinder4xThorns
   m_TagString: Untagged
@@ -19665,7 +19669,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26b5bb80ece4194b86058b8ed11b58d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 90
+--- !u!65 &260291672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645367004339451026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4067965, y: 1.7939429, z: 3.1256466}
+  m_Center: {x: 3.2727885, y: 1.5686219, z: -0.22420502}
+--- !u!65 &260291673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645367004339451026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.784326, y: 1.7939429, z: 3.1256466}
+  m_Center: {x: -3.3731844, y: 1.5686219, z: -0.22420502}
+--- !u!65 &260291674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645367004339451026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5145483, y: 1.7939429, z: 3.6940465}
+  m_Center: {x: 0.04251051, y: 1.5686219, z: 3.197182}
+--- !u!65 &260291675
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645367004339451026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5145483, y: 1.7939429, z: 3.6313438}
+  m_Center: {x: 0.04251051, y: 1.5686219, z: -3.5323992}
 --- !u!1 &5645367004427280464
 GameObject:
   m_ObjectHideFlags: 0
