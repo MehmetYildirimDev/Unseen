@@ -18,21 +18,23 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        
+
     }
 
     private void Start()
     {
+        print(SceneManager.GetActiveScene().buildIndex);
 
         try
         {
+            Canvas = GameObject.Find("Canvas");
             GameOverPanel = GameObject.Find("GameOverPanel");
             LevelComplatePanel = GameObject.Find("LevelComplatePanel");
         }
         catch (System.Exception)
         {
 
-            Debug.Log("GameOverPanel bulunamadi");
+            Debug.Log("GameOverPanel or Canvas bulunamadi");
         }
 
         GameOverPanel.SetActive(false);
@@ -43,9 +45,11 @@ public class GameManager : MonoBehaviour
 
     private void CreateLevelNumberText()
     {
-        Canvas = GameObject.Find("Canvas");
-        GameObject LevelText = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform);
-        GamePanelPrefab.transform.GetChild(0).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
+
+        GameObject GamePanel = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform);
+        GamePanel.transform.GetChild(0).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
+
+
     }
 
     public void ShowGameOVerPanel()
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour
     public void ShowLevelComplatePanel()
     {
         LevelComplatePanel.SetActive(true);
-        
+
     }
 
     public void RestartLevel()
