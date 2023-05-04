@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa4bdba9550e9f4b88921a2f0d9d082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PortalExit: {fileID: 5282286532737643016}
   EffectPrefab: {fileID: 1850505789695555285, guid: e6af6102e92244346ba7a65ba07c0e23, type: 3}
 --- !u!65 &5282286531700275226
 BoxCollider:

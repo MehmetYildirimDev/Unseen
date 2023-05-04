@@ -5,12 +5,11 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     private Transform SpawnPoint;
-    private GameObject PortalExit;
+    public GameObject PortalExit;
     private GameObject PortalCover;
     [SerializeField] private GameObject EffectPrefab;
     private void Start()
     {
-        PortalExit = GameObject.Find("PortalExit");
         SpawnPoint = PortalExit.transform.GetChild(0).transform;
         PortalCover = PortalExit.transform.GetChild(3).gameObject;
     }
