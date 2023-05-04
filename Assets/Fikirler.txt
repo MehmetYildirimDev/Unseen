@@ -18,6 +18,8 @@ kullanýlanlar:
 	MoveThornClynder
 	"" 2xThornClynder
 	MultiRocketSpawner
+	Portal
+
 
 Kullanilmayanlar:
 	
@@ -25,7 +27,7 @@ Kullanilmayanlar:
 	"" 4x
 	LockDoor-Key
 	ButtonEngel
-	Portal
+	
 
 
 
