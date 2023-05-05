@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     private void CreateLevelNumberText()
     {
 
-        GameObject GamePanel = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform);
+        GameObject GamePanel = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform.GetChild(0).transform);
         GamePanel.transform.GetChild(0).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
 
 
