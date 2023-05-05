@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ExitScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip winClip;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            SoundManager.instance.PlaySound(winClip);
             LevelComplate();
         }
     }

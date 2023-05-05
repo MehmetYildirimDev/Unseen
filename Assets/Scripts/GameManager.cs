@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject GamePanelPrefab;
     private GameObject Canvas;
 
+    private bool gameOverCalled = false;
     private void Awake()
     {
         instance = this;
@@ -41,6 +42,20 @@ public class GameManager : MonoBehaviour
         LevelComplatePanel.SetActive(false);
 
         CreateLevelNumberText();
+    }
+
+    private void Update()
+    {
+        if (PlayerMovement.instance.isGameOver && !gameOverCalled)
+        {
+            onGameOver();
+        }
+    }
+
+    private void onGameOver()
+    {
+        SoundManager.instance.PlayGameOverSound();
+        gameOverCalled = true;
     }
 
     private void CreateLevelNumberText()

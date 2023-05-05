@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Flower : MonoBehaviour
 {
+    [SerializeField] private AudioClip ScaleUpclip;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            SoundManager.instance.PlaySound(ScaleUpclip);
             Debug.Log("Player Can verildi");
             other.transform.localScale += Vector3.one / 2;
             PlayerMovement.instance.playerScale++;

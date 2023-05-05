@@ -4902,6 +4902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d66163b26da714dbdd407d8182727b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScaleUpclip: {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
 --- !u!54 &7467998181126775212
 Rigidbody:
   m_ObjectHideFlags: 0

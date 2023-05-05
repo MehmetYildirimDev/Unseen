@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+
     public bool isGameOver;
 
     public static PlayerMovement instance;//Singleton yapiyoz
@@ -30,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
         instance = this;
         playerScale = 0;
     }
+
+    private void Start()
+    {
+
+    }
+
 
     private void Update()
     {

@@ -6,6 +6,8 @@ public class Rocket : MonoBehaviour
 {
     public float speed = 5f;
     public GameObject impactEffectPrefab;
+
+    [SerializeField] private AudioClip explosionClip;
     void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
@@ -21,7 +23,6 @@ public class Rocket : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Game Over");
             PlayerMovement.instance.isGameOver = true;
         }
 
@@ -29,6 +30,9 @@ public class Rocket : MonoBehaviour
         {
             return;
         }
+
+        SoundManager.instance.PlaySound(explosionClip);
+
         GameObject impactEffect = Instantiate(impactEffectPrefab, collision.contacts[0].point, Quaternion.identity);
         Destroy(impactEffect, 1f);
         Destroy(this.gameObject);

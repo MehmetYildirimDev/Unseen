@@ -16,6 +16,9 @@ public class EnemyScript : MonoBehaviour
     public float distance;
 
     public EnemyFov enemyFovScript;
+
+    [SerializeField] bool gameOverCalled = false;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -23,26 +26,26 @@ public class EnemyScript : MonoBehaviour
         enemyFovScript = gameObject.GetComponent<EnemyFov>();
     }
 
+    float count;
+
     private void Start()
     {
-        
+
         target = dots[index].transform;
         agent.SetDestination(target.position);
     }
 
     private void Update()
     {
-        if (enemyFovScript.canSeePlayer || PlayerMovement.instance.isGameOver)
+        if (enemyFovScript.canSeePlayer || PlayerMovement.instance.isGameOver && !gameOverCalled)
         {
             //agent.SetDestination(enemyFovScript.target.position);
             GameOver();
-            
+
             return;
-        
+
 
         }
-
-        
 
 
         if (agent.remainingDistance <= agent.stoppingDistance)
@@ -64,12 +67,13 @@ public class EnemyScript : MonoBehaviour
 
     }
 
+
+
     private void GameOver()
     {
-        Debug.Log("oyun bitti");
         agent.isStopped = true;
         GetComponent<Animator>().Play("EnemyCatch");
         PlayerMovement.instance.isGameOver = true;
-
+        gameOverCalled = true;
     }
 }

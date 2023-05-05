@@ -1614,6 +1614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 180
+  waitTime: 1
+  rotateClip: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
 --- !u!65 &6176629397285326139
 BoxCollider:
   m_ObjectHideFlags: 0

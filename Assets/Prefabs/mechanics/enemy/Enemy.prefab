@@ -1905,6 +1905,7 @@ MonoBehaviour:
   - {fileID: 0}
   distance: 0
   enemyFovScript: {fileID: 0}
+  GameOverClip: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
 --- !u!114 &6643309158451137364
 MonoBehaviour:
   m_ObjectHideFlags: 0

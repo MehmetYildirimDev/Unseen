@@ -4934,6 +4934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   impactEffectPrefab: {fileID: 649430720938688429, guid: 1e856b1d193b44e46a37d84aa6374526, type: 3}
+  explosionClip: {fileID: 8300000, guid: cb7938ffaf7cce7438d0f01557892934, type: 3}
 --- !u!54 &2224301896015031159
 Rigidbody:
   m_ObjectHideFlags: 0

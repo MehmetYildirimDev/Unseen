@@ -9,10 +9,10 @@ public static class MenuManager
     public static GameObject mainMenu, settingsMenu, ShopMenu;
     public static void Init()
     {
-        GameObject canvas = GameObject.Find("Canvas");
-        mainMenu = canvas.transform.Find("MainMenu").gameObject;
-        settingsMenu = canvas.transform.Find("SettingsMenu").gameObject;
-        ShopMenu = canvas.transform.Find("ShopMenu").gameObject;
+        GameObject SafeArea = GameObject.Find("SafeArea");//safearea = canvas
+        mainMenu = SafeArea.transform.Find("MainMenu").gameObject;
+        settingsMenu = SafeArea.transform.Find("SettingsMenu").gameObject;
+        ShopMenu = SafeArea.transform.Find("ShopMenu").gameObject;
 
         IsInitialised = true;
     }
