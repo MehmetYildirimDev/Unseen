@@ -12,7 +12,7 @@ public class Guillotine : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            PlayerMovement.instance.isGameOver = true;
+            PlayerController.instance.isGameOver = true;
             GameObject blood = Instantiate(BloodPrefab, other.ClosestPoint(transform.position), Quaternion.identity);
             Destroy(blood, 1f);
         }

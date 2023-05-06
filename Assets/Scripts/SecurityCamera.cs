@@ -15,7 +15,7 @@ public class SecurityCamera : MonoBehaviour
     {
         if (enemyFovScript.canSeePlayer)
         {
-            PlayerMovement.instance.isGameOver = true;
+            PlayerController.instance.isGameOver = true;
             GetComponentInParent<Animation>().Stop();
         }
     }

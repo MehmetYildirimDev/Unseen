@@ -1719,6 +1719,7 @@ MonoBehaviour:
   lastPos: {x: 0, y: 0, z: 0}
   dif: {x: 0, y: 0, z: 0}
   animator: {fileID: 8069590553349684785}
+  dynamicJoystick: {fileID: 0}
 --- !u!54 &8069590553359027702
 Rigidbody:
   m_ObjectHideFlags: 0

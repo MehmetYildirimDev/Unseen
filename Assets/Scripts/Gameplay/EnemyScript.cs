@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
-        if (enemyFovScript.canSeePlayer || PlayerMovement.instance.isGameOver && !gameOverCalled)
+        if (enemyFovScript.canSeePlayer || PlayerController.instance.isGameOver && !gameOverCalled)
         {
             //agent.SetDestination(enemyFovScript.target.position);
             GameOver();
@@ -73,7 +73,7 @@ public class EnemyScript : MonoBehaviour
     {
         agent.isStopped = true;
         GetComponent<Animator>().Play("EnemyCatch");
-        PlayerMovement.instance.isGameOver = true;
+        PlayerController.instance.isGameOver = true;
         gameOverCalled = true;
     }
 }

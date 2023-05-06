@@ -20,7 +20,7 @@ public class Thorns : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerMovement.instance.isGameOver = true;
+            PlayerController.instance.isGameOver = true;
         }
     }
 }

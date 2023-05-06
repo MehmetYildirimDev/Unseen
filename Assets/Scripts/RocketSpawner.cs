@@ -18,7 +18,7 @@ public class RocketSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerMovement.instance.isGameOver)
+        if (PlayerController.instance.isGameOver)
         {
             CancelInvoke();
         }

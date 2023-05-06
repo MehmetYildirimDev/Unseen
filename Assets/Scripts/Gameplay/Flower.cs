@@ -13,7 +13,7 @@ public class Flower : MonoBehaviour
             SoundManager.instance.PlaySound(ScaleUpclip);
             Debug.Log("Player Can verildi");
             other.transform.localScale += Vector3.one / 2;
-            PlayerMovement.instance.playerScale++;
+            PlayerController.instance.playerScale++;
             Destroy(this.gameObject);
         }
     }

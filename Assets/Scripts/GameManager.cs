@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerMovement.instance.isGameOver && !gameOverCalled)
+        if (PlayerController.instance.isGameOver && !gameOverCalled)
         {
             onGameOver();
         }

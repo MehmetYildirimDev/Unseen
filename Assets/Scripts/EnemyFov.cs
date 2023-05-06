@@ -17,7 +17,7 @@ public class EnemyFov : MonoBehaviour
 
     private void Start()
     {
-        target = PlayerMovement.instance.transform;
+        target = PlayerController.instance.transform;
     }
 
     private void Update()

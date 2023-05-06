@@ -23,7 +23,7 @@ public class Rocket : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerMovement.instance.isGameOver = true;
+            PlayerController.instance.isGameOver = true;
         }
 
         if (collision.gameObject.CompareTag("RocketSpawner"))

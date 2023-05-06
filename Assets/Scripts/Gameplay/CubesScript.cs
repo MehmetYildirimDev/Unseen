@@ -9,7 +9,7 @@ public class CubesScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            int playerScale = PlayerMovement.instance.playerScale;
+            int playerScale = PlayerController.instance.playerScale;
 
             if (playerScale > 0)
             {
