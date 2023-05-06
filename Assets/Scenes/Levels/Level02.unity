@@ -248,7 +248,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32832
+  m_Name: pb_Mesh75514
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -479,18 +479,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1982036361}
-    - target: {fileID: 3387078488173716565, guid: 6197ff564be936c4cb2eae0534f4308a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartLevel
-      objectReference: {fileID: 0}
     - target: {fileID: 3387078489098695551, guid: 6197ff564be936c4cb2eae0534f4308a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1982036361}
-    - target: {fileID: 3387078489098695551, guid: 6197ff564be936c4cb2eae0534f4308a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 3387078490199946119, guid: 6197ff564be936c4cb2eae0534f4308a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1355,6 +1347,17 @@ Transform:
   m_Father: {fileID: 1812667530}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1352610988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 865425671236067245, guid: 6197ff564be936c4cb2eae0534f4308a, type: 3}
+  m_PrefabInstance: {fileID: 542270336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0d0e7a039f526499c356a3c5cd6d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1430233838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1507,7 +1510,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32808
+  m_Name: pb_Mesh75488
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2045,6 +2048,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8069590553359027696, guid: d19883342f4e78648b29b0a63cd8632f, type: 3}
+      propertyPath: dynamicJoystick
+      value: 
+      objectReference: {fileID: 1352610988}
     - target: {fileID: 8069590553359027697, guid: d19883342f4e78648b29b0a63cd8632f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2101,7 +2108,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32756
+  m_Name: pb_Mesh75434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2696,7 +2703,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32778
+  m_Name: pb_Mesh75456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
