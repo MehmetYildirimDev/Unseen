@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5987673560345361072}
   - component: {fileID: 5987673560345361079}
   - component: {fileID: 5987673560345361078}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -8.824477, y: 6.9316044, z: -7.010124}
+  m_ConnectedAnchor: {x: -8.824477, y: 6.9316034, z: -7.010124}
   m_UseSpring: 1
   m_Spring:
     spring: 180
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5987673560590938783}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Doors (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 5987673560848201400}
   - component: {fileID: 5987673560848201407}
   - component: {fileID: 5987673560848201406}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: door0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -8.699905, y: 6.9373846, z: -0.331079}
+  m_ConnectedAnchor: {x: -8.699905, y: 6.9373837, z: -0.331079}
   m_UseSpring: 1
   m_Spring:
     spring: 180

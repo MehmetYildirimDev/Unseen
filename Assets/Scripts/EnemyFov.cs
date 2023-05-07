@@ -10,7 +10,7 @@ public class EnemyFov : MonoBehaviour
     public float FovRadius;
     [Range(0, 360)] public float FovAngle;
     public LayerMask targetMask;
-    public LayerMask obstructionMask;
+    public LayerMask[] obstructionMask;
     public bool canSeePlayer;
 
     public Transform target;
@@ -24,7 +24,7 @@ public class EnemyFov : MonoBehaviour
     {
 
         FOVChechk();
-        
+
     }
     private void FOVChechk()
     {
@@ -39,7 +39,9 @@ public class EnemyFov : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directonToTarget, distanceToTarget, obstructionMask))
+                if (!Physics.Raycast(transform.position, directonToTarget, distanceToTarget, obstructionMask[0])
+                    &&
+                    !Physics.Raycast(transform.position, directonToTarget, distanceToTarget, obstructionMask[1]))
                     canSeePlayer = true;
                 else
                     canSeePlayer = false;

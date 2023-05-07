@@ -8,6 +8,8 @@ public class Portal : MonoBehaviour
     public GameObject PortalExit;
     private GameObject PortalCover;
     [SerializeField] private GameObject EffectPrefab;
+
+    [SerializeField] private AudioClip clip;
     private void Start()
     {
         SpawnPoint = PortalExit.transform.GetChild(0).transform;
@@ -18,6 +20,8 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            SoundManager.instance.PlaySound(clip);
+
             other.transform.position = SpawnPoint.position;
 
             PortalCover.GetComponent<Animation>().Play("PortalExitCoverAnim");

@@ -10,8 +10,11 @@ public class MusicVolumeSlider : MonoBehaviour
 
     private void Start()
     {
-        //hata burada
-        float volume = PlayerPrefs.GetFloat("musicSource");
+        float volume;
+
+        
+
+        volume = PlayerPrefs.GetFloat("musicSource");
 
         slider.value = volume;
 

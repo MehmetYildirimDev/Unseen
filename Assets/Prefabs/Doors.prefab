@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8019313776868818981}
   - component: {fileID: 8019313776868818982}
   - component: {fileID: 8019313775823197606}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: door0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,10 +114,10 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -12.407018, y: 6.868272, z: -14.48}
+  m_ConnectedAnchor: {x: -12.29, y: 6.868272, z: -11.2975}
   m_UseSpring: 1
   m_Spring:
-    spring: 90
+    spring: 360
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -125,16 +125,16 @@ HingeJoint:
     targetVelocity: 0
     force: 1
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: -120
-    max: 120
+    min: -150
+    max: 150
     bounciness: 1
     bounceMinVelocity: 0.2
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7312786334953158970}
   - component: {fileID: 7312786334953158969}
   - component: {fileID: 7312786333922602169}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,10 +265,10 @@ HingeJoint:
   m_Anchor: {x: 0, y: 9.811817, z: 0}
   m_Axis: {x: 1, y: 180, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.6070175, y: 6.868272, z: -14.48}
+  m_ConnectedAnchor: {x: -3.4899998, y: 6.868272, z: -11.2975}
   m_UseSpring: 1
   m_Spring:
-    spring: 90
+    spring: 360
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -276,16 +276,16 @@ HingeJoint:
     targetVelocity: 0
     force: 1
     freeSpin: 0
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_Limits:
-    min: -120
-    max: 120
+    min: -150
+    max: 150
     bounciness: 1
     bounceMinVelocity: 0.2
     contactDistance: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
@@ -311,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8019313776282549778}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}

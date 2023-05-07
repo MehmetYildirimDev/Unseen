@@ -59,6 +59,9 @@ public class SoundManager : MonoBehaviour
 
     public void SaveVolume()
     {
+        if (!PlayerPrefs.HasKey("musicSource")) PlayerPrefs.SetFloat("musicSource", 0.5f);
+        if (!PlayerPrefs.HasKey("effectSource")) PlayerPrefs.SetFloat("effectSource", 0.5f);
+
         ChangeMusicVolume(PlayerPrefs.GetFloat("musicSource"));
         ChangeEffectVolume(PlayerPrefs.GetFloat("effectSource"));
     }

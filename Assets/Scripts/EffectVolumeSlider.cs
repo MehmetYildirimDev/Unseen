@@ -10,7 +10,11 @@ public class EffectVolumeSlider : MonoBehaviour
 
     private void Start()
     {
-        float volume = PlayerPrefs.GetFloat("effectSource");
+        float volume;
+
+        
+
+        volume = PlayerPrefs.GetFloat("effectSource");
 
         slider.value = volume;
 
@@ -18,6 +22,6 @@ public class EffectVolumeSlider : MonoBehaviour
         slider.onValueChanged.AddListener(value => SoundManager.instance.ChangeEffectVolume(value));
     }
 
-    
+
 
 }

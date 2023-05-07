@@ -80,7 +80,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 67
+    m_Bits: 579
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -1924,8 +1924,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   obstructionMask:
-    serializedVersion: 2
+  - serializedVersion: 2
     m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 512
   canSeePlayer: 0
   target: {fileID: 0}
 --- !u!1 &6643309158451137367
