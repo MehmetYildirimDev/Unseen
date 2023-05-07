@@ -49,7 +49,7 @@ Light:
   m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -77,12 +77,12 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 67
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1826,7 +1826,7 @@ Transform:
   m_GameObject: {fileID: 6643309158451137365}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -10, y: 0, z: -3.4244306}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   m_Children:
   - {fileID: 6643309158451107703}
   - {fileID: 6643309158451107585}
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   - {fileID: 0}
   distance: 0
   enemyFovScript: {fileID: 0}
-  GameOverClip: {fileID: 8300000, guid: 7e26c9daf4c32483b9c2790e662d3f1b, type: 3}
+  gameOverCalled: 0
 --- !u!114 &6643309158451137364
 MonoBehaviour:
   m_ObjectHideFlags: 0
