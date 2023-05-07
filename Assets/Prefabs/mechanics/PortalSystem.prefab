@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PortalExit: {fileID: 5282286532737643016}
   EffectPrefab: {fileID: 1850505789695555285, guid: e6af6102e92244346ba7a65ba07c0e23, type: 3}
+  clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
 --- !u!65 &5282286531700275226
 BoxCollider:
   m_ObjectHideFlags: 0
