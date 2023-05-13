@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExitScript : MonoBehaviour
 {
     [SerializeField] private AudioClip winClip;
+    private const int LEVELCOUNT = 20;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,7 +42,16 @@ public class ExitScript : MonoBehaviour
     {
         GameManager.instance.ShowLevelComplatePanel();
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        if (SceneManager.GetActiveScene().buildIndex == LEVELCOUNT)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 
 }

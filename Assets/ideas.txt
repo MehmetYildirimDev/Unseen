@@ -19,14 +19,17 @@ kullanýlanlar:
 	"" 2xThornClynder
 	MultiRocketSpawner
 	Portal
-
+	giyotin
+	LockDoor-Key
+	"" 4x
+	ButtonEngel
 
 Kullanilmayanlar:
 	
-	giyotin
-	"" 4x
-	LockDoor-Key
-	ButtonEngel
+	
+	
+	
+	
 	
 
 
