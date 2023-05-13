@@ -9,11 +9,15 @@ public class GameManager : MonoBehaviour
 {
     private GameObject GameOverPanel;
     private GameObject LevelComplatePanel;
+    private GameObject PausePanel;
+    private GameObject PauseButton;
+
 
     public static GameManager instance;//Singleton yapiyoruz
 
     public GameObject GamePanelPrefab;
     private GameObject Canvas;
+    
 
     private bool gameOverCalled = false;
     private void Awake()
@@ -31,6 +35,8 @@ public class GameManager : MonoBehaviour
             Canvas = GameObject.Find("Canvas");
             GameOverPanel = GameObject.Find("GameOverPanel");
             LevelComplatePanel = GameObject.Find("LevelComplatePanel");
+            PausePanel = GameObject.Find("PausePanel");
+            PauseButton = GameObject.Find("PauseButton");
         }
         catch (System.Exception)
         {
@@ -40,6 +46,7 @@ public class GameManager : MonoBehaviour
 
         GameOverPanel.SetActive(false);
         LevelComplatePanel.SetActive(false);
+        PausePanel.SetActive(false);
 
         CreateLevelNumberText();
     }
@@ -94,6 +101,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void PauseButtonOnclick()
+    {
+        PausePanel.SetActive(true);
+        PauseButton.SetActive(false);
+        Time.timeScale = 0;
+    }
 
+    public void ContinueButtonOnclick()
+    {
+        PausePanel.SetActive(false);
+        PauseButton.SetActive(true);
+        Time.timeScale = 1;
+    }
 
+    private void OnDestroy()
+    {
+        Time.timeScale = 1;
+    }
 }
