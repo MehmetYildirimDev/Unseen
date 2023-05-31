@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "416840903459",
+    "firebase_url": "https://escapevisiondb-default-rtdb.firebaseio.com",
+    "project_id": "escapevisiondb",
+    "storage_bucket": "escapevisiondb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416840903459:android:e32e52ab41d9d9a2437a96",
+        "android_client_info": {
+          "package_name": "com.KernelGames.EscapeVision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3Xp31glJn1Urtv531-3QzbaXwMwPRRuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
