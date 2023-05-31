@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject GamePanelPrefab;
     private GameObject Canvas;
-    
+
 
     private bool gameOverCalled = false;
     private void Awake()
@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitAndRunGameOverPanel()
     {
         yield return new WaitForSeconds(1f);
+        PauseButton.SetActive(false);
         GameOverPanel.SetActive(true);
     }
 
@@ -117,6 +118,11 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (PauseButton != null)
+        {
+            PauseButton.SetActive(true);
+        }
         Time.timeScale = 1;
+
     }
 }

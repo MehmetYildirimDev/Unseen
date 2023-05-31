@@ -27,6 +27,7 @@ kullanýlanlar:
 Kullanilmayanlar:
 	
 	
+	Bolum resetleme
 	
 	
 	
