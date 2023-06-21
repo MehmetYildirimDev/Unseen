@@ -7,12 +7,11 @@ using UnityEngine.SceneManagement;
 public class mainMenu : MonoBehaviour
 {
 
-    public GameObject InfoPanel;
+
 
     private void Start()
     {
         MenuManager.IsInitialised = false;
-        InfoPanel.SetActive(false);
     }
 
     public void OnClick_Settings()
@@ -30,25 +29,6 @@ public class mainMenu : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
     }
 
-
-    public List<Text> texts = new List<Text>();
-    public void Onclick_Info()
-    {
-        if (InfoPanel.activeSelf == true)
-        {
-            InfoPanel.SetActive(false);
-
-            return;
-        }
-        //TODO: firebaseden verileri oku
-
-        for (int i = 0; i < FirebaseManager.instance.data.Count; i++)
-        {
-            texts[i].text = FirebaseManager.instance.data[i];
-        }
-
-        InfoPanel.SetActive(true);
-    }
 
     public void onClick_Exit()
     {

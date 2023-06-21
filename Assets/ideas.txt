@@ -36,3 +36,5 @@ Kullanilmayanlar:
 
 	muzik icin referans
 	Music by SergeQuadrado from Pixabay
+
+	//banner reklam : ca-app-pub-9626446588139226/3786510538
