@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOVerPanel()
     {
         StartCoroutine(WaitAndRunGameOverPanel());
+        
     }
 
     private IEnumerator WaitAndRunGameOverPanel()
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         PauseButton.SetActive(false);
         GameOverPanel.SetActive(true);
+        GetComponent<AdMobInterstitial>().ShowAD_Interstitial();
     }
 
     public void ShowLevelComplatePanel()

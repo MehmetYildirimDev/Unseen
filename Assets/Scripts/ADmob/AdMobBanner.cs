@@ -7,7 +7,8 @@ using GoogleMobileAds.Api;
 
 public class AdMobBanner : MonoBehaviour
 {
-    [SerializeField] private Text BilgiText;
+    //[SerializeField] private Text BilgiText;
+
 
     private void Start()
     {
@@ -41,7 +42,7 @@ public class AdMobBanner : MonoBehaviour
         }
 
         // Create a 320x50 banner at top of the screen
-        _bannerView = new BannerView(_adUnitId, AdSize.SmartBanner, AdPosition.Top);
+        _bannerView = new BannerView(_adUnitId, AdSize.SmartBanner, AdPosition.Bottom);
     }
     /// <summary>
     /// Creates the banner view and loads a banner ad.
@@ -129,7 +130,7 @@ public class AdMobBanner : MonoBehaviour
 
     public void Onclick_Banner()
     {
-        BilgiText.text = "Banner Kaldirildi";
+        //BilgiText.text = "Banner Kaldirildi";
         DestroyAd();
     }
 }

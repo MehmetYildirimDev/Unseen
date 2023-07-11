@@ -15,6 +15,6 @@ MonoBehaviour:
   adMobAndroidAppId: ca-app-pub-9626446588139226~6280811935
   adMobIOSAppId: 
   delayAppMeasurementInit: 0
-  optimizeInitialization: 0
-  optimizeAdLoading: 0
+  optimizeInitialization: 1
+  optimizeAdLoading: 1
   userTrackingUsageDescription: 

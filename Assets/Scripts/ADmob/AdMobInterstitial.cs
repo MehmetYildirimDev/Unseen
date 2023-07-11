@@ -73,10 +73,11 @@ public class AdMobInterstitial : MonoBehaviour
                 // Register to ad events to extend functionality.
                 RegisterEventHandlers(ad);
             });
+        
     }
 
     /// <summary>
-    /// Shows the interstitial ad.
+    /// Shows the interstitial ad.//bunda hata aliyorum
     /// </summary>
     public void ShowAd()
     {
@@ -131,7 +132,7 @@ public class AdMobInterstitial : MonoBehaviour
         };
     }
 
-    public void Onclilc_Interstitial()
+    public void ShowAD_Interstitial()
     {
         if (interstitialAd.CanShowAd())
         {
