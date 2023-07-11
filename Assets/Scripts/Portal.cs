@@ -20,7 +20,15 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SoundManager.instance.PlaySound(clip);
+            try
+            {
+                SoundManager.instance.PlaySound(clip);
+            }
+            catch (System.Exception)
+            {
+                print("sound manager yok");
+            }
+            
 
             other.transform.position = SpawnPoint.position;
 

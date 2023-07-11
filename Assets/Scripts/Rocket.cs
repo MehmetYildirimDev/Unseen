@@ -31,7 +31,14 @@ public class Rocket : MonoBehaviour
             return;
         }
 
-        SoundManager.instance.PlaySound(explosionClip);
+        try
+        {
+            SoundManager.instance.PlaySound(explosionClip);
+        }
+        catch (System.Exception)
+        {
+            print("sound manager yok");
+        }
 
         GameObject impactEffect = Instantiate(impactEffectPrefab, collision.contacts[0].point, Quaternion.identity);
         Destroy(impactEffect, 1f);

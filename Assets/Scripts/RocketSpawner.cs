@@ -26,9 +26,16 @@ public class RocketSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        SoundManager.instance.PlaySound(shootClip);
+        try
+        {
+            SoundManager.instance.PlaySound(shootClip);
+        }
+        catch (System.Exception)
+        {
+            print("sound manager yok");
+        }
         GetComponent<Animation>().Play("RocketSpawnerAnim");
         Instantiate(Rocket, spawnPoint.position, this.transform.rotation);
-        
+
     }
 }

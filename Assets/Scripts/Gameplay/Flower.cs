@@ -10,7 +10,15 @@ public class Flower : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SoundManager.instance.PlaySound(ScaleUpclip);
+            try
+            {
+                SoundManager.instance.PlaySound(ScaleUpclip);
+            }
+            catch (System.Exception)
+            {
+                print("sound manager yok");
+            }
+
             Debug.Log("Player Can verildi");
             other.transform.localScale += Vector3.one / 2;
             PlayerController.instance.playerScale++;

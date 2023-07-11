@@ -12,7 +12,15 @@ public class ExitScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SoundManager.instance.PlaySound(winClip);
+            try
+            {
+                SoundManager.instance.PlaySound(winClip);
+            }
+            catch (System.Exception)
+            {
+                print("sound manager yok");
+            }
+
             LevelComplate();
         }
     }

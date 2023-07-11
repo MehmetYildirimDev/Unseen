@@ -61,7 +61,15 @@ public class GameManager : MonoBehaviour
 
     private void onGameOver()
     {
-        SoundManager.instance.PlayGameOverSound();
+        try
+        {
+            SoundManager.instance.PlayGameOverSound();
+        }
+        catch (System.Exception)
+        {
+            print("sound manager yok");
+        }
+        
         gameOverCalled = true;
     }
 
