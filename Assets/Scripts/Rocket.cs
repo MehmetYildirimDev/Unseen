@@ -44,4 +44,11 @@ public class Rocket : MonoBehaviour
         Destroy(impactEffect, 1f);
         Destroy(this.gameObject);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        GameObject impactEffect = Instantiate(impactEffectPrefab, other.gameObject.transform.position , Quaternion.identity);
+        Destroy(impactEffect, 1f);
+        Destroy(this.gameObject);
+    }
 }
