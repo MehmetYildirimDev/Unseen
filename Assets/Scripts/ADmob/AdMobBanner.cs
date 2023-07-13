@@ -18,6 +18,8 @@ public class AdMobBanner : MonoBehaviour
     }
     //benim banner reklam kodum
     //ca-app-pub-9626446588139226/3786510538
+    //test
+    //ca-app-pub-3940256099942544/6300978111
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
     private string _adUnitId = "ca-app-pub-3940256099942544/6300978111";

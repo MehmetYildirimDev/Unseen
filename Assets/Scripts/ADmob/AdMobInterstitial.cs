@@ -21,6 +21,8 @@ public class AdMobInterstitial : MonoBehaviour
     }
     //benim gecis reklam kodum
     //ca-app-pub-9626446588139226/1715696602
+    //test
+    //ca-app-pub-3940256099942544/1033173712
     // These ad units are configured to always serve test ads.
 #if UNITY_ANDROID
     private string _adUnitId = "ca-app-pub-3940256099942544/1033173712";
