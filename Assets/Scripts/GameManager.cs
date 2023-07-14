@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private GameObject LevelComplatePanel;
     private GameObject PausePanel;
     private GameObject PauseButton;
-
+    private Button RestartButton;
 
     public static GameManager instance;//Singleton yapiyoruz
 
@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             LevelComplatePanel = GameObject.Find("LevelComplatePanel");
             PausePanel = GameObject.Find("PausePanel");
             PauseButton = GameObject.Find("PauseButton");
+            RestartButton = PausePanel.transform.Find("RestartButton").GetComponent<Button>();
         }
         catch (System.Exception)
         {
@@ -49,7 +50,11 @@ public class GameManager : MonoBehaviour
         PausePanel.SetActive(false);
 
         CreateLevelNumberText();
+
+        RestartButton.onClick.AddListener(RestartLevel);
     }
+
+
 
     private void Update()
     {

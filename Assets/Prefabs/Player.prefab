@@ -1730,7 +1730,7 @@ Transform:
   - {fileID: 8069590553359520165}
   - {fileID: 8069590553624829502}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8069590553349684785
 Animator:
@@ -1767,11 +1767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameOver: 0
   playerScale: 0
-  rigidbody: {fileID: 8069590553359027702}
-  speed: 500
-  rotationSpeed: 10
-  playerStaticRotation: {fileID: 8069590553624829503}
-  animator: {fileID: 8069590553349684785}
+  movementSpeed: 10
+  rotationSpeed: 650
+  status: 1
 --- !u!54 &8069590553359027702
 Rigidbody:
   m_ObjectHideFlags: 0
