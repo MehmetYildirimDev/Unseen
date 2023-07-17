@@ -1767,8 +1767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameOver: 0
   playerScale: 0
-  movementSpeed: 10
-  rotationSpeed: 650
+  movementSpeed: 300
+  rotationSpeed: 750
   status: 1
 --- !u!54 &8069590553359027702
 Rigidbody:
@@ -1816,10 +1816,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.55
-  m_Height: 3.75
+  m_Radius: 0.78481513
+  m_Height: 3.7807014
   m_Direction: 1
-  m_Center: {x: 0, y: 1.85, z: 0}
+  m_Center: {x: 0.0036969185, y: 1.8861498, z: 0.1311369}
 --- !u!1 &8069590553359027699
 GameObject:
   m_ObjectHideFlags: 0
