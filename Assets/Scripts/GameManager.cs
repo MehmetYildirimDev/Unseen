@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     {
 
         GameObject GamePanel = Instantiate(GamePanelPrefab, Canvas.transform.position, Quaternion.identity, Canvas.transform.GetChild(0).transform);
-        GamePanel.transform.GetChild(0).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
+        GamePanel.transform.GetChild(1).GetComponent<Text>().text = "Level " + SceneManager.GetActiveScene().buildIndex.ToString();
 
 
     }
