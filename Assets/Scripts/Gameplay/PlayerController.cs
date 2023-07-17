@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    private Vector3 touchStartPosition;
+    private bool isMoving = false;
 
     public bool isGameOver;
 
@@ -18,12 +20,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rotationSpeed;
 
 
-    //public new Rigidbody rigidbody;
+    private Rigidbody rb;
     //public GameObject playerStaticRotation;
 
     private Animator animator;
 
-    //private DynamicJoystick dynamicJoystick;
+    private DynamicJoystick dynamicJoystick;
     private Vector3 direction;
 
 
@@ -42,26 +44,60 @@ public class PlayerController : MonoBehaviour
         instance = this;
         playerScale = 0;
         animator = this.GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
     }
-
-    //private void Start()
-    //{
-    //    dynamicJoystick = GameObject.Find("Dynamic Joystick").GetComponent<DynamicJoystick>();
-    //}
-
-
+    
     private void Update()
     {
-        if (isGameOver)
+
+        if (!isGameOver)
         {
+            //MoveAndRotate();
+
+            if (Input.touchCount > 0)
+            {
+                _touch = Input.GetTouch(0);
+
+                if (_touch.phase == TouchPhase.Began)
+                {
+                    _dragStarted = true;
+                    _isMoving = true;
+                    _touchDown = _touch.position;
+                    _touchUp = _touch.position;
+
+                    animator.SetBool("isMoving", _isMoving);
+                }
+            }
+            if (_dragStarted)
+            {
+                if (_touch.phase == TouchPhase.Moved)
+                {
+                    _touchDown = _touch.position;
+                }
+
+                if (_touch.phase == TouchPhase.Ended)
+                {
+                    _touchDown = _touch.position;
+                    _isMoving = false;
+                    _dragStarted = false;
+                    animator.SetBool("isMoving", _isMoving);
+                }
+
+                Vector3 direction = Vector3.forward * (_touchDown - _touchUp).normalized.y + Vector3.right * (_touchDown - _touchUp).normalized.x;
+
+                gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
+                //gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
+                rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction, ForceMode.VelocityChange);
+            }
+        }
+        else
+        {
+            animator.Play("PlayerCatch");
             GameManager.instance.ShowGameOVerPanel();
         }
 
-        animatorController();
-        MoveAndRotate();
-
     }
-
+    
     private void MoveAndRotate()
     {
         if (Input.touchCount > 0)
@@ -93,10 +129,15 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isMoving", _isMoving);
             }
 
+
+
             gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
             gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
+
         }
     }
+
+
 
     Quaternion CalculateRotation()
     {
@@ -123,7 +164,45 @@ public class PlayerController : MonoBehaviour
         }
         //animator.SetFloat("velocity", direction.magnitude);
     }
+    /*
+    private void FixedUpdate()
+    {
+        if (Input.touchCount > 0)
+        {
+            _touch = Input.GetTouch(0);
 
+            if (_touch.phase == TouchPhase.Began)
+            {
+                _dragStarted = true;
+                _isMoving = true;
+                _touchDown = _touch.position;
+                _touchUp = _touch.position;
+
+                animator.SetBool("isMoving", _isMoving);
+            }
+        }
+        if (_dragStarted)
+        {
+            if (_touch.phase == TouchPhase.Moved)
+            {
+                _touchDown = _touch.position;
+            }
+
+            if (_touch.phase == TouchPhase.Ended)
+            {
+                _touchDown = _touch.position;
+                _isMoving = false;
+                _dragStarted = false;
+                animator.SetBool("isMoving", _isMoving);
+            }
+
+            Vector3 direction =  Vector3.forward * (_touchDown - _touchUp).normalized.y + Vector3.right * (_touchDown - _touchUp).normalized.x;
+
+            gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
+            //gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
+            rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction, ForceMode.VelocityChange);
+        }
+    }
     /*
     public void FixedUpdate()
     {
@@ -144,6 +223,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     */
+    
     //oyun tek bi fonksiyonda bitmeli ve diger objeler oyun bitti methodu calistiginda ona gore tepki vermeli
     public void GameOver()
     {
