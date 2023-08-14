@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameOver: 0
   playerScale: 0
-  movementSpeed: 300
+  movementSpeed: 75
   rotationSpeed: 750
   status: 1
 --- !u!54 &8069590553359027702

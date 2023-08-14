@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
                 gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
                 //gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
-                rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction, ForceMode.VelocityChange);
+                rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction.normalized, ForceMode.VelocityChange);
             }
         }
         else
