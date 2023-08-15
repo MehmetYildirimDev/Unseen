@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     private DynamicJoystick dynamicJoystick;
-    private Vector3 direction;
+    //private Vector3 direction;
 
 
     private Touch _touch;
@@ -47,13 +47,18 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        dynamicJoystick = GameObject.FindGameObjectWithTag("DynamicJoystick").GetComponent<DynamicJoystick>();
+    }
+
     private void Update()
     {
 
         if (!isGameOver)
         {
             //MoveAndRotate();
-
+            /*
             if (Input.touchCount > 0)
             {
                 _touch = Input.GetTouch(0);
@@ -65,7 +70,7 @@ public class PlayerController : MonoBehaviour
                     _touchDown = _touch.position;
                     _touchUp = _touch.position;
 
-                    animator.SetBool("isMoving", _isMoving);
+                    
                 }
             }
             if (_dragStarted)
@@ -83,18 +88,16 @@ public class PlayerController : MonoBehaviour
                     animator.SetBool("isMoving", _isMoving);
                 }
 
-                direction = Vector3.forward * (_touchDown - _touchUp).normalized.y + Vector3.right * (_touchDown - _touchUp).normalized.x;
+                //direction = Vector3.forward * (_touchDown - _touchUp).normalized.y + Vector3.right * (_touchDown - _touchUp).normalized.x;
 
-                gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
+                //gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
                 //gameObject.transform.Translate(Vector3.forward * Time.deltaTime * movementSpeed);
                 //rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction.normalized, ForceMode.VelocityChange);
             }
+            */
         }
-        else
-        {
-            animator.Play("PlayerCatch");
-            GameManager.instance.ShowGameOVerPanel();
-        }
+
+
 
     }
 
@@ -102,13 +105,36 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGameOver)
         {
+
+            Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
+            Debug.Log("dynamicJoystick.Vertical: " + dynamicJoystick.Vertical);
+            rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction, ForceMode.VelocityChange);
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion newRotation = Quaternion.LookRotation(direction);
+                rb.rotation = newRotation;
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+            //gameObject.transform.rotation = Quaternion.RotateTowards(transform.rotation, CalculateRotation(), rotationSpeed * Time.deltaTime);
+            /*
             if (_dragStarted)
             {
                 rb.AddForce(movementSpeed * Time.fixedDeltaTime * direction.normalized, ForceMode.VelocityChange);
             }
+            */
+        }
+        else
+        {
+            animator.Play("PlayerCatch");
+            GameManager.instance.ShowGameOVerPanel();
         }
     }
-
+    /*
     private void MoveAndRotate()
     {
         if (Input.touchCount > 0)
@@ -148,7 +174,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+    */
 
     Quaternion CalculateRotation()
     {
