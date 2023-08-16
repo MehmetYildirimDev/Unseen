@@ -7,6 +7,8 @@ TagManager:
   - RocketSpawner
   - ScaleBuff
   - DynamicJoystick
+  - VariableJoystick
+  - FloatingJoystick
   layers:
   - Default
   - TransparentFX
